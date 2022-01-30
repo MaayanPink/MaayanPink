@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="roni script.js"></script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="column4">
+                <form class="search" action="/search">
+                    <input type="hidden" name="type" value="product">
+                    <input type="text" name="q" class="search_box" placeholder="Search..." value="" autocapitalize="off" autocomplete="off" autocorrect="off">
+                </form>
+            </div>
+            <div class="column1">
+                <ul class="log-list">
+                    <div class="list-item">
+                        <li>
+                            <div class="log-item">
+                                <p id="sign-up">sign up</p>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="list-item">
+                        <li>
+                            <p id="login" class="log-item">Log in</p>
+                        </li>
+                    </div>
+                    <div class="list-item">
+                        <li>
+                            <p id="logout">Log out</p>
+                        </li>
+                    </div>
+                    <div class="list-item">
+                        <li>
+                            <a class="log-item" href="cart.html" class="cart_button"><img src="shop-img/cart-icon.png" height="19px" class="log-item" class="icon-cart"> Cart (<span class="cart_count">0</span>)</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="login-container1">
+        <div class="new-friend">
+            <form id="new-login">
+                <h2>wanna be friends?</h2>
+                <div>
+                    <label for="signup-email">E-Mail address</label>
+                    <input type="email" id="signup-email" placeholder="enter your E-Mail here" required />
+                </div>
+                <div>
+                    <label for="signup-password">choose Password</label>
+                    <input type="password" id="signup-password" placeholder="enter your password here" required />
+                </div>
+                <div class="sub1">
+                    <input type="submit" class="submit" value="Sign up">
+                </div>
+                <p class="error"></p>
+            </form>
+        </div>
+    </div>
+    <div class="login-container2">
+        <div class="old-friend">
+            <form id="old-login">
+                <h2>already a friend?</h2>
+                <div><label for="signin-email">E-Mail</label>
+                    <input type="text" name="email" id="signin-email" placeholder="enter your E-Mail here" />
+                </div>
+                <div><label for="signin-password">Password</label>
+                    <input type="password" name="password" id="signin-password" placeholder="enter your password here" />
+                </div>
+                <div class="sub2">
+                    <input type="submit" class="submit" value="Sign in">
+                </div>
+                <p class="error"></p>
+            </form>
+        </div>
+    </div>
+    <nav class="header">
+        <ul>
+            <li><a class="home" href="#top">home</a></li>
+            <li><a class="pagelink" href="#my-name">about us</a></li>
+            <li><a class="pagelink" href="#pic-section">gallery</a></li>
+            <li><a class="pagelink" href="#tutorials">tutorials</a></li>
+            <li><a class="pagelink" href="shopping.html">shop</a></li>
+            <li><a class="pagelink" href="#contact-us">contact us</a></li>
+        </ul>
+    </nav>
+    <h1 class="roni">Roni Pink</h1>
+    <div class="round-li">
+        <ul style="list-style-type:none">
+            <li class=pics>
+                <img src="img/dancer.png" class="roundimg" alt="dancer" height=150px width=auto> </li>
+            <li class=pic>
+                <img src="img/makeup.jpeg" class="roundimg" alt="makeup" height=150px width=auto></li>
+            <li class=pic>
+                <img src="img/blue hair.jpeg" class="roundimg" alt="blue hair" height=150px width=auto></li>
+        </ul>
+    </div>
+    <img src="feathers-img/feather_1.png" class="feather1" alt="feather" height=133px width=400px>
+    <div id="my-name">
+        <div class="banner">
+            <div class="pic1">
+                <img src="img/peace.jpeg" alt="at peace" height=200px width=auto>
+            </div>
+            <div class="hobbies">
+                <p>my name is Roni, I am 9 years old <br> my parents are Oded and Maayan<br> I have two little brothers, Boaz and Amos.<br> I love creating.</br>
+                    my favorite things to do are:</p>
+                <ul style="list-style-type:none;" class="hobby-list">
+                    <li>origami</li>
+                    <li>coloring</li>
+                    <li>sculpting</li>
+                    <li>cutting and gluing</li>
+                    <li>baking cookies</li>
+                </ul>
+                <p>I also love reading, dancing, riding a bike or my roller blades</br>
+                    but most of all i love hanging out with my friends</p>
+            </div>
+            <div class="pic1">
+                <img src="img/fire.jpeg" alt="bonfire" height=200px width=auto>
+            </div>
+        </div>
+    </div>
+    <!-- gallery section -->
+    <div id="pic-section">
+        <div class="gallery-opening">
+            <p>here are some pics of me and my family</p>
+        </div>
+        <div class="feather1">
+            <img src="feathers-img/feather_3.png" alt="feather" height=133px width=400px>
+        </div>
+        <div id="slider">
+            <ul class="slides">
+                <li class="slide">
+                    <div class="gallery">
+                        <a target="_blank" href="dancer.png">
+                            <img src="img/dancer.png" class="pic" alt="Dancer" height="auto" width="450">
+                        </a>
+                        <div class="desc">Me in my dance studio</div>
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="gallery">
+                        <a target="_blank" href="doing yoga.jpeg">
+                            <img src="img/doing yoga.jpeg" class="pic" alt="Doing yoga" height="auto" width="450">
+                        </a>
+                        <div class="desc">Practicing yoga</div>
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="gallery">
+                        <a target="_blank" href="my brothers.jpeg">
+                            <img src="img/my brothers.jpeg" class="pic" alt="my brothers" height="auto" width="450">
+                        </a>
+                        <div class="desc">My younger brothers</div>
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="gallery">
+                        <a target="_blank" href="family.jpeg">
+                            <img src="img/family.jpeg" class="pic" alt="family" height="auto" width="450">
+                        </a>
+                        <div class="desc">My loving family</div>
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="gallery">
+                        <a target="_blank" href="with my friends.jpeg">
+                            <img src="img/with my friends.jpeg" class="pic" alt="with my friends" height="auto" width="450"></a>
+                        <div class="desc">With my friends</div>
+                </li>
+                <li class="slide">
+                    <div class="gallery">
+                        <a target="_blank" href="big family.jpeg">
+                            <img src="img/big family.jpeg" class="pic" alt="big family" height="auto" width="450">
+                        </a>
+                        <div class="desc">With my grandparents and cousins</div>
+                    </div>
+                </li>
+                <li class="slide">
+                    <div class="gallery">
+                        <a target="_blank" href="dancer.png">
+                            <img src="img/dancer.png" class="pic" alt="Dancer" height="auto" width="450">
+                        </a>
+                        <div class="desc">Me in my dance studio</div>
+                    </div>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <!-- tutorials section -->
+        <div id="tutorials">
+            <p>Get creative with me! <br> follow me on my tutorials, and we will do creative things together.</p>
+            <div class="feather1">
+                <img src="feathers-img/feather_4.png" alt="feather" height=133px width=400px>
+            </div>
+        </div>
+        <div class="video-container">
+            <div class="video">
+                <iframe width="650" height="365" src="https://www.youtube.com/embed/LIebyq1CkqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button class="more-videos" onclick="document.location='tutorials.html'">more tutorials</button>
+            </div>
+            <div class="video-info1">
+                <p class="info">MAKING DELICIOUS COOKIES<br>ingredients:<br>flour <br> sugar <br> butter <br> chocolate chips <br>egg <br>vanilla</p>
+            </div>
+            <div class="video-info2">
+                <p class="info">You want to make your life easier and fun?<br>Buy my cookie kit<br> easy peasy, just add melted butter,<br> mix it all and in the oven it goes</p>
+                <button class="shopping" onclick="document.location='shopping.html'">go shopping!</button>
+            </div>
+        </div>
+        <!-- form section -->
+        <div id="contact-us">
+            <p class="keep-in-touch">let's stay in touch...</br> you can comment or give me<br>helpful suggestions on what you would like to see.</p>
+            <img src="feathers-img/feather_1.png" class="feather1" alt="feather" height=133px width=400px>
+            <form class="form-group" action="connected.html">
+                <div class="form-data">
+                    <div>
+                        <label>Name</label><br>
+                        <input type="text" name="name" class="form-control" placeholder="enter your name here" required/>
+                    </div>
+                    <div> <label>E-Mail</label><br>
+                        <input type="text" name="email" class="form-control" placeholder="enter your E-Mail here" />
+                    </div>
+                    <div>
+                        <label>what's on your mind?</label><br>
+                        <textarea class="form-control" name="text-area" rows="10" cols="50" placeholder="suggestions?   ideas?   comments?"></textarea>
+                    </div>
+                    <button class="btn btn-primary" id="submitBtn">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div id="social-nav">
+            <ul id="social">
+                <li id="facebook">
+                    <a href="https://www.facebook.com" target="_blank"><img src="social-img/facebook.png" class="so-img" height="40px"></a>
+                </li>
+                <li id="pinterest">
+                    <a href="http://pinterest.com" target="_blank"><img src="social-img/pinterest.png" class="so-img" height="40px"></a>
+                </li>
+                <li id="instagram">
+                    <a href="http://www.instagram.com" target="_blank"><img src="social-img/instagram.png" class="so-img" height="40px"></a>
+                </li>
+                <li id="twitter">
+                    <a href="https://twitter.com" target="_blank"><img src="social-img/twitter.png" class="so-img" height="40px"></a>
+                </li>
+                <li id="youtube">
+                    <a href="http://www.youtube.com" target="_blank"><img src="social-img/youtube.png" class="so-img" height="40px"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <p> © all rights reserved, Pinkas Productions</p>
+        </div>
+        <script type="module" src="index.js"></script>
+</body>
+
+</html>

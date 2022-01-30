@@ -1,0 +1,537 @@
+@font-face {
+    font-family: 'amatic SC';
+    src: url(https://fonts.gstatic.com/s/amaticsc/v13/TUZyzwprpvBS1izr_vOECuSf.woff2) format('woff2');
+}
+
+body {
+    background-color: #f9f5f1;
+}
+
+.top-bar {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    height: 45px;
+    background-color: #a99ea9;
+}
+
+.column4 {
+    width: 220px;
+    margin-top: 5px;
+}
+
+.column,
+.columns {
+    float: left;
+    margin-left: 25px;
+}
+
+.column1 {
+    float: right;
+    margin-right: 20px;
+    margin-top: -45px;
+}
+
+.log-list li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.top-bar a,
+.top-bar p {
+    font-family: "amatic sc", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    color: #065e60;
+    letter-spacing: 1px;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: 0px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.icon-cart {
+    margin-bottom: -2px;
+    margin-right: -6px;
+}
+
+#sign-up {
+    position: relative;
+}
+
+.header {
+    font-family: "amatic sc", arial;
+    font-size: 40px;
+    font-weight: 900;
+    top: 0;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    position: fixed;
+    background-color: #bcb3bc;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.header li {
+    display: inline-block;
+}
+
+.header a {
+    display: block;
+    color: #065e60;
+    padding: 10px 5px;
+}
+
+.roni {
+    font-family: "amatic sc", arial;
+    font-weight: 900;
+    font-size: 100px;
+    text-align: center;
+    color: #ef96b7;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+.round-li {
+    width: 100%;
+    text-align: center;
+}
+
+.round-li li {
+    display: inline-block;
+}
+
+.pics {
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.roundimg {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border-width: 3 px;
+    border-style: double;
+    border-color: #e5c3dd;
+    display: inline;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.feather1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#my-name {
+    padding-top: 17px;
+    margin-top: -55px;
+}
+
+.banner {
+    display: flex;
+    background-color: #e5c3dd;
+    margin-top: 50px;
+}
+
+.banner>div {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e5c3dd;
+    text-align: center;
+}
+
+.pic1 {
+    width: 200px;
+    height: 200px;
+    margin-top: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    border-width: 3px;
+    border-style: double;
+    border-color: #4A4A4A;
+    display: inline;
+}
+
+.banner p {
+    font-family: "amatic sc";
+    font-size: 30px;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: 60px
+}
+
+.hobby li {
+    display: block;
+}
+
+.hobby-list li {
+    font-family: "amatic sc";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#pic-section {
+    padding-top: 50px;
+    margin-top: -60px;
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-opening p {
+    font-family: "amatic sc";
+    font-size: 60px;
+    color: lightseagreen;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#slider {
+    width: 720px;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+}
+
+#slider .slides {
+    display: block;
+    width: 5040px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    background-color: lightseagreen;
+}
+
+#slider .slide {
+    float: left;
+    list-style-type: none;
+    width: 720px;
+    height: 400px;
+    text-align: center;
+    align-self: center;
+}
+
+.gallery {
+    text-align: center;
+    justify-content: center;
+}
+
+.pic {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.desc {
+    text-align: center;
+    font-family: "amatic sc", arial;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+#tutorials {
+    padding-top: 60px;
+    margin-top: -60px;
+    font-family: "amatic sc";
+    font-size: 60px;
+    color: #fd8e37;
+    font-weight: bold;
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    background-color: #fd8e37;
+}
+
+.video-container>div {
+    font-family: "amatic sc";
+    margin: 15px;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.video {
+    background-color: #fd8e37;
+    padding-top: 15px;
+}
+
+.shopping {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    touch-action: manipulation;
+    background: #f1ac67;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+
+/*form section*/
+
+#contact-us {
+    padding-top: 75px;
+    margin-top: -75px;
+}
+
+.keep-in-touch {
+    font-size: 40px;
+    color: #e5c3dd;
+    font-family: "amatic sc";
+    font-weight: bold;
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+}
+
+.form-group {
+    font-family: "amatic sc";
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: left;
+    background-color: #e5c3dd;
+    width: 90%;
+    margin-left: 3%;
+    margin-bottom: 25px;
+    margin-top: 55px;
+    padding: 70px 0px 50px 50px;
+}
+
+.form-data {
+    margin-left: 70px;
+}
+
+input {
+    background-color: #f9f5f1;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=checkbox] {
+    line-height: .5em;
+    margin: 4px 0 0 0;
+    height: auto;
+}
+
+::placeholder {
+    font-family: "amatic sc";
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #f9f5f1;
+}
+
+textarea {
+    background-color: #f9f5f1;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    touch-action: manipulation;
+    background: #337ab7;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+#social {
+    list-style-type: none;
+    display: block;
+    margin: -55px auto -20px;
+    position: relative;
+    width: 300px;
+    height: 50px;
+    z-index: 99;
+}
+
+#social li {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.so-img {
+    opacity: 0.5;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.right {
+    font-family: "amatic sc", arial;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* connected*/
+
+.stay-connected {
+    font-family: "amatic sc", arial;
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    color: violet;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.go-back {
+    font-family: "amatic sc", arial;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.video-roler {
+    margin-top: 50px;
+    border: violet solid 5px;
+    border-radius: 5px;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+
+/*shop*/
+
+.shop-container {
+    text-align: center;
+}
+
+.shop-container h1 {
+    font-family: "amatic sc", arial;
+    font-weight: 900;
+    font-size: 100px;
+    margin-top: 120px;
+    text-align: center;
+    color: violet;
+}
+
+
+/*tutorials*/
+
+.more-videos {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    touch-action: manipulation;
+    background: #f1ac67;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+
+/*login*/
+
+.login-container1,
+.login-container2 {
+    margin-top: 70px;
+    display: inline-block;
+    font-family: "amatic sc";
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: left;
+    background-color: #ABE2DA;
+    width: 70%;
+    margin-left: 10%;
+    padding-left: 40px;
+    z-index: 10000;
+    position: fixed;
+}
+
+.list-item {
+    display: inline;
+}
+
+.friend-cont {
+    display: flex;
+    font-family: "amatic sc";
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: left;
+    background-color: #e5c3dd;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 25px;
+    margin-top: 55px;
+    padding: 70px 0px 50px 50px;
+}
+
+.submit {
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    touch-action: manipulation;
+    background: #f9f5f1;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.nav-cont {
+    margin-top: 50px;
+}

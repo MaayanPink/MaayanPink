@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Shop</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="column4">
+                <form class="search" action="/search">
+                    <input type="hidden" name="type" value="product">
+                    <input type="text" name="q" class="search_box" placeholder="Search..." value="" autocapitalize="off" autocomplete="off" autocorrect="off">
+                </form>
+            </div>
+            <div class="column1">
+                <ul class="log-list">
+                    <div class="list-item">
+                        <li>
+                            <div class="log-item">
+                                <p id="sign-up">sign up</p>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="list-item">
+                        <li>
+                            <p id="login" class="log-item">Log in</p>
+                        </li>
+                    </div>
+                    <div class="list-item">
+                        <li>
+                            <p id="logout">Log out</p>
+                        </li>
+                    </div>
+                    <div class="list-item">
+                        <li>
+                            <a class="log-item" href="cart.html" class="cart_button"><img src="shop-img/cart-icon.png" height="19px" class="log-item" class="icon-cart"> Cart (<span class="cart_count">0</span>)</a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="login-container1">
+        <div class="new-friend">
+            <form id="new-login">
+                <h2>wanna be friends?</h2>
+                <div>
+                    <label for="signup-email">E-Mail address</label>
+                    <input type="email" id="signup-email" placeholder="enter your E-Mail here" required />
+                </div>
+                <div>
+                    <label for="signup-password">choose Password</label>
+                    <input type="password" id="signup-password" placeholder="enter your password here" required />
+                </div>
+                <div class="sub1">
+                    <input type="submit" class="submit" value="Sign up">
+                </div>
+                <p class="error"></p>
+            </form>
+        </div>
+    </div>
+    <div class="login-container2">
+        <div class="old-friend">
+            <form id="old-login">
+                <h2>already a friend?</h2>
+                <div><label for="signin-email">E-Mail</label>
+                    <input type="text" name="email" id="signin-email" placeholder="enter your E-Mail here" />
+                </div>
+                <div><label for="signin-password">Password</label>
+                    <input type="password" name="password" id="signin-password" placeholder="enter your password here" />
+                </div>
+                <div class="sub2">
+                    <input type="submit" class="submit" value="Sign in">
+                </div>
+                <p class="error"></p>
+            </form>
+        </div>
+    </div>
+    <nav class="header">
+        <ul>
+            <li><a class="home" href="Roni.html#top">home</a></li>
+            <li><a class="pagelink" href="Roni.html#my-name">about us</a></li>
+            <li><a class="pagelink" href="Roni.html#pic-section">gallery</a></li>
+            <li><a class="pagelink" href="Roni.html#tutorials">tutorials</a></li>
+            <li><a class="pagelink" href="shopping.html">shop</a></li>
+            <li><a class="pagelink" href="Roni.html#contact-us">contact us</a></li>
+        </ul>
+    </nav>
+    <div class="shop-container">
+        <h1>welcome to my online store!</h1>
+        <img src="feathers-img/feather_1.png" class="feather1" alt="feather" height=100px width=300px>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="item-pic"><img src="shop-img/clay-kit.jpeg" height="150px"></div>
+            <div class="item-info">
+                <p>Clay Kit <br> 500 gr white clay<br> clay floral stamps<br> clay letter stamps<br> clay working tools</p>
+            </div>
+            <div class="item-price">
+                <h3>get it for only<br>9.99$<br><button class="add-to-cart">add to cart</button></h3>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="item-pic"><img src="shop-img/clay-kit.jpeg" height="150px"></div>
+            <div class="item-info">
+                <p>Clay Kit <br> 500 gr white clay<br> clay floral stamps<br> clay letter stamps<br> clay working tools</p>
+            </div>
+            <div class="item-price">
+                <h3>get it for only<br>9.99$<br><button class="add-to-cart">add to cart</button></h3>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="item-pic"><img src="shop-img/clay-kit.jpeg" height="150px"></div>
+            <div class="item-info">
+                <p>Clay Kit <br> 500 gr white clay<br> clay floral stamps<br> clay letter stamps<br> clay working tools</p>
+            </div>
+            <div class="item-price">
+                <h3>get it for only<br>9.99$<br><button class="add-to-cart">add to cart</button></h3>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="item-pic"><img src="shop-img/clay-kit.jpeg" height="150px"></div>
+            <div class="item-info">
+                <p>Clay Kit <br> 500 gr white clay<br> clay floral stamps<br> clay letter stamps<br> clay working tools</p>
+            </div>
+            <div class="item-price">
+                <h3>get it for only<br>9.99$<br><button class="add-to-cart">add to cart</button></h3>
+            </div>
+        </div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+    <div id="social-nav">
+        <ul id="social">
+            <li id="facebook">
+                <a href="https://www.facebook.com" target="_blank"><img src="social-img/facebook.png" class="so-img" height="40px"></a>
+            </li>
+            <li id="pinterest">
+                <a href="http://pinterest.com" target="_blank"><img src="social-img/pinterest.png" class="so-img" height="40px"></a>
+            </li>
+            <li id="instagram">
+                <a href="http://www.instagram.com" target="_blank"><img src="social-img/instagram.png" class="so-img" height="40px"></a>
+            </li>
+            <li id="twitter">
+                <a href="https://twitter.com" target="_blank"><img src="social-img/twitter.png" class="so-img" height="40px"></a>
+            </li>
+            <li id="youtube">
+                <a href="http://www.youtube.com" target="_blank"><img src="social-img/youtube.png" class="so-img" height="40px"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <p> © all rights reserved, Pinkas Productions</p>
+    </div>
+
+</body>
+<script src="jquery-3.6.0.js"></script>
+<script src="roni script.js"></script>
+
+</html>
+
+<style>
+    .shop-container {
+        text-align: center;
+    }
+    
+    .shop-container h1 {
+        font-family: "amatic sc", arial;
+        font-weight: 900;
+        font-size: 60px;
+        margin-top: 120px;
+        text-align: center;
+        color: violet;
+    }
+    
+    .grid-container {
+        display: grid;
+        width: 90%;
+        grid-template-columns: auto auto;
+        background-color: #f9f5f1;
+        padding: 10px;
+        grid-gap: 20px;
+        text-align: center;
+        align-content: center;
+        margin-left: 5%;
+        margin-bottom: 50px;
+    }
+    
+    .grid-item {
+        background-color: #efe7e6;
+        border: 1px solid #c9ada7;
+        font-size: 30px;
+        text-align: center;
+        border-radius: 15px;
+        display: flex;
+    }
+    
+    .grid-item>div {
+        font-family: "amatic sc";
+        font-size: 25px;
+        font-weight: 700;
+        width: 33%;
+    }
+    
+    .item-pic img {
+        border: 2px double #c9ada7;
+        margin: 30px 0px 0px 0px;
+    }
+    
+    .item-info p {
+        font-family: "amatic sc";
+    }
+    
+    .item-price h3 {
+        font-weight: 900;
+    }
+    
+    .add-to-cart {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        touch-action: manipulation;
+        background: #c9ada7;
+        color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+</style>
+
+<script>
+    $(document).ready(function() {
+        $('.add-to-cart').hover(function() {
+            $(this).css('color', '#c9ada7').css('background-color', '#fff');
+        }, function() {
+            $(this).css('color', '#fff').css('background-color', '#c9ada7');
+        });
+        var count = 0;
+        $('.add-to-cart').click(function() {
+            count++;
+            $('.cart_count').html(count)
+        });
+
+    });
+</script>
