@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+import { getFirestore, doc, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+import { getStorage, ref } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js";
 
 const firebaseApp = initializeApp({
 
@@ -15,6 +16,28 @@ const firebaseApp = initializeApp({
 
 const auth = getAuth(firebaseApp);
 const db = getFirestore(firebaseApp);
+const colRef = collection(db, 'comments')
+    //get collection data
+getDocs(colRef).then((snapshot) => {
+    let comments = []
+    snapshot.docs.forEach((doc) => {
+        comments.push({...doc.data(), id: doc.id })
+    })
+    console.log(comments)
+})
+
+//adding a comment
+const addComment = document.querySelector('.form-group')
+addComment.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addDoc(colRef, {
+        name: addComment.name.value,
+        comment: addComment.comments.value
+    }).then(() => {
+        addComment.reset()
+    })
+});
+
 
 onAuthStateChanged(auth, user => {
     if (user != null) {
