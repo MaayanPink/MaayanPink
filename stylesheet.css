@@ -116,7 +116,10 @@ a:link {
     height: 200px;
 }
 
-.roundimg {
+.roundimg,
+.roundimg1,
+.roundimg2,
+.roundimg3 {
     width: 150px;
     height: 150px;
     overflow: hidden;
@@ -129,7 +132,9 @@ a:link {
     margin-left: 15px;
 }
 
-.feather1 {
+.feather1,
+.feather2,
+.feather3 {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -155,7 +160,8 @@ a:link {
     text-align: center;
 }
 
-.pic1 {
+.banner-pic1,
+.banner-pic2 {
     width: 200px;
     height: 200px;
     margin-top: 250px;
@@ -232,7 +238,12 @@ a:link {
     justify-content: center;
 }
 
-.pic {
+.slider-pic1,
+.slider-pic2,
+.slider-pic3,
+.slider-pic4,
+.slider-pic5,
+.slider-pic6 {
     display: block;
     margin: auto;
     margin-top: 20px;

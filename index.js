@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
-import { getFirestore, doc, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-import { getStorage, ref } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js";
+import { getFirestore, collection, getDocs, addDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js";
 
 const firebaseApp = initializeApp({
 
@@ -13,9 +13,63 @@ const firebaseApp = initializeApp({
     appId: "1:196218979082:web:1990703aa62829ade730f3",
     measurementId: "G-0Z0WELGY07"
 });
+//storage
+const storage = getStorage(firebaseApp);
+//round-image
+const storageRef1 = [ref(storage, 'Roni/dancer.png'), ref(storage, 'Roni/blue hair.jpeg'), ref(storage, 'Roni/makeup.jpeg'), ref(storage, 'feathers/feather_1.png'), ref(storage, 'feathers/feather_3.png'), ref(storage, 'feathers/feather_4.png'), ref(storage, 'feathers/feather_1.png')];
+const addPic1 = [document.querySelector('.roundimg1'), document.querySelector('.roundimg2'), document.querySelector('.roundimg3'), document.querySelector('.feather1'), document.querySelector('.feather3'), document.querySelector('.feather4'), document.querySelector('.feather2')]
+for (let i = 0; i < storageRef1.length; i++) {
+    for (let j = 0; j < addPic1.length; j++) {
+        if (i == j) {
+            getDownloadURL(storageRef1[i]).then((url) => {
+                addPic1[j].src = url;
+            })
+        }
+    }
+}
 
-const auth = getAuth(firebaseApp);
+//Feathers images
+const storageRef2 = [ref(storage, 'feathers/feather_1.png'), ref(storage, 'feathers/feather_3.png'), ref(storage, 'feathers/feather_4.png'), ref(storage, 'feathers/feather_1.png')];
+const addPic2 = [document.querySelector('.feather1'), document.querySelector('.feather3'), document.querySelector('.feather4'), document.querySelector('.feather2')]
+for (let i = 0; i < storageRef2.length; i++) {
+    for (let j = 0; j < addPic2.length; j++) {
+        if (i == j) {
+            getDownloadURL(storageRef2[i]).then((url) => {
+                addPic2[j].src = url;
+            })
+        }
+    }
+}
+
+//banner images
+const storageRef3 = [ref(storage, 'Roni/peace.jpeg'), ref(storage, 'Roni/fire.jpeg')];
+const addPic3 = [document.querySelector('.banner-pic1'), document.querySelector('.banner-pic2')]
+for (let i = 0; i < storageRef3.length; i++) {
+    for (let j = 0; j < addPic3.length; j++) {
+        if (i == j) {
+            getDownloadURL(storageRef3[i]).then((url) => {
+                addPic3[j].src = url;
+            })
+        }
+    }
+}
+
+//slider images
+const storageRef4 = [ref(storage, 'Roni/dancer.png'), ref(storage, 'Roni/doing yoga.jpeg'), ref(storage, 'Roni/my brothers.jpeg'), ref(storage, 'Roni/family.jpeg'), ref(storage, 'Roni/with my friends.jpeg'), ref(storage, 'Roni/big family.jpeg'), ref(storage, 'Roni/dancer.png')];
+const addPic4 = [document.querySelector('.slider-pic1'), document.querySelector('.slider-pic2'), document.querySelector('.slider-pic3'), document.querySelector('.slider-pic4'), document.querySelector('.slider-pic5'), document.querySelector('.slider-pic6'), document.querySelector('.slider-pic7')]
+for (let i = 0; i < storageRef4.length; i++) {
+    for (let j = 0; j < addPic4.length; j++) {
+        if (i == j) {
+            getDownloadURL(storageRef4[i]).then((url) => {
+                addPic4[j].src = url;
+            })
+        }
+    }
+}
+
+// firestore database
 const db = getFirestore(firebaseApp);
+//collection ref
 const colRef = collection(db, 'comments')
     //get collection data
 getDocs(colRef).then((snapshot) => {
@@ -38,6 +92,8 @@ addComment.addEventListener('submit', (e) => {
     })
 });
 
+// authentication
+const auth = getAuth(firebaseApp);
 
 onAuthStateChanged(auth, user => {
     if (user != null) {
@@ -62,9 +118,8 @@ newLogin.addEventListener('submit', (e) => {
         newLogin.reset();
         newLogin.querySelector('.error').innerHTML = '';
     }).catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        newLogin.querySelector('.error').innerHTML = errorMessage;
+
+        newLogin.querySelector('.error').innerHTML = error.message;
     });
 });
 
