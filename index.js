@@ -16,7 +16,7 @@ const firebaseApp = initializeApp({
 //storage
 const storage = getStorage(firebaseApp);
 //round-image
-const storageRef1 = [ref(storage, 'Roni/dancer.png'), ref(storage, 'Roni/blue hair.jpeg'), ref(storage, 'Roni/makeup.jpeg'), ref(storage, 'feathers/feather_1.png'), ref(storage, 'feathers/feather_3.png'), ref(storage, 'feathers/feather_4.png'), ref(storage, 'feathers/feather_1.png')];
+const storageRef1 = [ref(storage, 'Roni/at the beach.jpeg'), ref(storage, 'Roni/face jewels.jpeg'), ref(storage, 'Roni/makeup.jpeg'), ref(storage, 'feathers/feather_1.png'), ref(storage, 'feathers/feather_3.png'), ref(storage, 'feathers/feather_4.png'), ref(storage, 'feathers/feather_1.png')];
 const addPic1 = [document.querySelector('.roundimg1'), document.querySelector('.roundimg2'), document.querySelector('.roundimg3'), document.querySelector('.feather1'), document.querySelector('.feather3'), document.querySelector('.feather4'), document.querySelector('.feather2')]
 for (let i = 0; i < storageRef1.length; i++) {
     for (let j = 0; j < addPic1.length; j++) {
@@ -55,8 +55,8 @@ for (let i = 0; i < storageRef3.length; i++) {
 }
 
 //slider images
-const storageRef4 = [ref(storage, 'Roni/dancer.png'), ref(storage, 'Roni/doing yoga.jpeg'), ref(storage, 'Roni/my brothers.jpeg'), ref(storage, 'Roni/family.jpeg'), ref(storage, 'Roni/with my friends.jpeg'), ref(storage, 'Roni/big family.jpeg'), ref(storage, 'Roni/dancer.png')];
-const addPic4 = [document.querySelector('.slider-pic1'), document.querySelector('.slider-pic2'), document.querySelector('.slider-pic3'), document.querySelector('.slider-pic4'), document.querySelector('.slider-pic5'), document.querySelector('.slider-pic6'), document.querySelector('.slider-pic7')]
+const storageRef4 = [ref(storage, 'Roni/dancer.png'), ref(storage, 'Roni/snow.jpg'), ref(storage, 'Roni/my brothers.jpeg'), ref(storage, 'Roni/snow-bro.jpeg'), ref(storage, 'Roni/with my friends.jpeg'), ref(storage, 'Roni/big family.jpeg'), ref(storage, 'Roni/painting with my brother.jpeg'), ref(storage, 'Roni/swinging.jpeg'), ref(storage, 'Roni/eating.jpeg')];
+const addPic4 = [document.querySelector('.slider-pic1'), document.querySelector('.slider-pic2'), document.querySelector('.slider-pic3'), document.querySelector('.slider-pic4'), document.querySelector('.slider-pic5'), document.querySelector('.slider-pic6'), document.querySelector('.slider-pic7'), document.querySelector('.slider-pic8'), document.querySelector('.slider-pic9')]
 for (let i = 0; i < storageRef4.length; i++) {
     for (let j = 0; j < addPic4.length; j++) {
         if (i == j) {

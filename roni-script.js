@@ -52,7 +52,6 @@ $(document).ready(function() {
         var $slider = $('#slider');
         var $slideContainer = $('.slides', $slider);
         var $slides = $('.slide', $slider);
-
         var interval;
 
         function startSlider() {
@@ -71,13 +70,10 @@ $(document).ready(function() {
         function pauseSlider() {
             clearInterval(interval);
         }
-
         $slideContainer.on('mouseenter', pauseSlider).on('mouseleave', startSlider);
-
         startSlider();
-
-
     });
+
     $(".so-img").hover(function() {
         $(this).animate({ opacity: '1' }, 0);
     }, function() {
