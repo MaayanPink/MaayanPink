@@ -7,7 +7,7 @@ body {
     background-color: #f9f5f1;
 }
 
-.top-bar {
+.login-top {
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -38,8 +38,8 @@ body {
     display: inline-block;
 }
 
-.top-bar a,
-.top-bar p {
+.login-top a,
+.login-top p {
     font-family: "amatic sc", sans-serif;
     font-weight: 900;
     font-size: 20px;
@@ -234,7 +234,7 @@ a:link {
     margin-top: 20px;
 }
 
-#tutorials {
+.come-along {
     padding-top: 120px;
     margin-top: -70px;
     font-family: "amatic sc";
@@ -248,6 +248,7 @@ a:link {
     display: flex;
     background-color: #fd8e37;
     width: 100%;
+    margin-top: 40px;
 }
 
 .video-container>div {
@@ -494,7 +495,7 @@ textarea {
     position: fixed;
 }
 
-.list-item {
+.listing {
     display: inline;
 }
 
@@ -537,7 +538,7 @@ textarea {
 }
 
 @media screen and (max-width: 800px) {
-    .top-bar {
+    .login-top {
         height: 6vh;
     }
     .header {
@@ -567,9 +568,14 @@ textarea {
         display: block;
     }
     .gallery-opening p,
-    #tutorials p,
+    .come-along,
     #contact-us p {
         font-size: 7vw;
+    }
+    .info,
+    .hobbies p,
+    .hobby-list li {
+        font-size: 4vw
     }
     #slider {
         width: 550px;
@@ -614,7 +620,7 @@ textarea {
         margin: 0;
         padding: 0;
     }
-    .form-control {
+    .forming {
         width: 50vw;
     }
     .so-img {
