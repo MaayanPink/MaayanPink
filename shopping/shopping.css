@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'amatic SC';
+    src: url(https://fonts.gstatic.com/s/amaticsc/v13/TUZyzwprpvBS1izr_vOECuSf.woff2) format('woff2');
+}
+
+.login-top {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    height: 30px;
+    background-color: #a99ea9;
+}
+
+.logList .listing {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.login-top a,
+.login-top p {
+    font-family: "amatic sc", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    color: #065e60;
+    letter-spacing: 1px;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: -20px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.icon-cart {
+    margin-bottom: -2px;
+    margin-right: -6px;
+}
+
+#sign-up {
+    position: relative;
+}
+
+.header {
+    top: 0;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    position: fixed;
+    background-color: #bcb3bc;
+    height: 90px;
+    margin-top: 20px;
+    z-index: 900;
+}
+
+.header li {
+    font-family: "amatic sc", arial;
+    font-size: 40px;
+    display: inline-block;
+    font-weight: 900;
+    margin-top: 12px;
+}
+
+.header a {
+    display: block;
+    color: #065e60;
+    padding: 10px 5px;
+}
+
+.shop-container {
+    text-align: center;
+}
+
+.shop-container h1 {
+    font-family: "amatic sc", arial;
+    font-weight: 900;
+    font-size: 80px;
+    margin-top: 120px;
+    text-align: center;
+    color: violet;
+}
+
+.grid-container {
+    display: grid;
+    width: 90%;
+    grid-template-columns: auto auto;
+    background-color: #f9f5f1;
+    padding: 10px;
+    grid-gap: 20px;
+    text-align: center;
+    align-content: center;
+    margin-left: 5%;
+    margin-bottom: 25px;
+    padding-bottom: 50px;
+}
+
+.grid-item {
+    background-color: #efe7e6;
+    border: 1px solid #c9ada7;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+}
+
+.grid-item>div {
+    font-family: "amatic sc";
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.info-cont>div {
+    width: 100%;
+}
+
+.info-cont {
+    display: flex;
+    width: 66%
+}
+
+.item-pic img {
+    border: 2px double #c9ada7;
+    margin: 30px 0px 0px 0px;
+}
+
+.item-info p {
+    font-family: "amatic sc";
+}
+
+.item-price h3 {
+    font-weight: 900;
+}
+
+.add-to-cart {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    touch-action: manipulation;
+    background: #c9ada7;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.shop-container {
+    text-align: center;
+}
+
+#social {
+    list-style-type: none;
+    display: block;
+    margin: -55px auto 0px;
+    position: relative;
+    width: 300px;
+    height: 50px;
+    z-index: 99;
+}
+
+#social li {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.so-img {
+    opacity: 0.5;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.right {
+    font-family: "amatic sc", arial;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    .item-pic img {
+        height: 15vh;
+    }
+    .login-top {
+        height: 6vh;
+    }
+    .header {
+        height: 13vh;
+    }
+    .header li {
+        font-size: 5vw;
+    }
+    .feather1 {
+        height: 17vw;
+        width: 51vw;
+    }
+    .shop-container h1 {
+        font-size: 8vw;
+    }
+    div>.grid-item {
+        width: 100%;
+    }
+    .grid-item {
+        display: block;
+    }
+    .info-cont {
+        width: 100%;
+    }
+    .grid-item p,
+    .grid-item h3 {
+        font-size: 3vw;
+    }
+}

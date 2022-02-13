@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'amatic SC';
+    src: url(https://fonts.gstatic.com/s/amaticsc/v13/TUZyzwprpvBS1izr_vOECuSf.woff2) format('woff2');
+}
+
+.tuto-container {
+    text-align: center;
+}
+
+.tuto-container h1 {
+    font-family: "amatic sc", arial;
+    font-weight: 900;
+    font-size: 100px;
+    margin-top: 120px;
+    text-align: center;
+    color: violet;
+}
