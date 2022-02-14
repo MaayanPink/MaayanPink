@@ -310,6 +310,10 @@ a:link {
     padding: 70px 0px 50px 50px;
 }
 
+.forming {
+    font-size: 15px;
+}
+
 .form-data {
     margin-left: 70px;
 }
@@ -340,6 +344,7 @@ input[type=checkbox] {
 textarea {
     background-color: #f9f5f1;
     margin-top: 20px;
+    font-size: 2px;
 }
 
 .submitIt {
