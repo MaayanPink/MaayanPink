@@ -37,6 +37,17 @@ a:link {
     text-decoration: none;
 }
 
+input {
+    font-family: "amatic sc", sans-serif;
+    background-color: #f9f5f1;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 .icon-cart {
     margin-bottom: -2px;
     margin-right: -6px;
@@ -70,6 +81,46 @@ a:link {
     display: block;
     color: #065e60;
     padding: 10px 5px;
+}
+
+.login-container1,
+.login-container2 {
+    margin-top: 70px;
+    display: inline-block;
+    font-family: "amatic sc";
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: left;
+    background-color: #ABE2DA;
+    width: 70%;
+    margin-left: 10%;
+    padding-left: 40px;
+    z-index: 10000;
+    position: fixed;
+}
+
+.listing {
+    display: inline;
+}
+
+.submit {
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    touch-action: manipulation;
+    background: #f9f5f1;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 .shop-container {
@@ -194,6 +245,15 @@ a:link {
     }
     .login-top {
         height: 6vh;
+    }
+    .login-top a,
+    .login-top p {
+        font-size: 3vw;
+    }
+    input {
+        width: 30vw;
+        height: 4vh;
+        font-size: 3vw;
     }
     .header {
         height: 13vh;
