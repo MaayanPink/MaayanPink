@@ -126,9 +126,9 @@ newLogin.addEventListener('submit', (e) => {
 $('.sub1').click(function() {
     onAuthStateChanged(auth, user => {
         if (user != null) {
-            $('.login-container1').hide(500);
+            $('#login-container1').hide(500);
         } else {
-            $('.login-container1').show(0);
+            $('#login-container1').show(0);
         }
 
     });
@@ -159,9 +159,9 @@ oldLogin.addEventListener('submit', (e) => {
 $('.sub2').click(function() {
     onAuthStateChanged(auth, user => {
         if (user != null) {
-            $('.login-container2').hide(500);
+            $('#login-container2').hide(500);
         } else {
-            $('.login-container2').show(0);
+            $('#login-container2').show(0);
         }
 
     });

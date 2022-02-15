@@ -15,7 +15,7 @@
     z-index: 1000;
     width: 100%;
     top: 0;
-    height: 30px;
+    height: 25px;
     background-color: #a99ea9;
 }
 
@@ -44,6 +44,10 @@ a:link {
     text-decoration: none;
 }
 
+.pagelink:hover {
+    color: #0dd0d3;
+}
+
 .icon-cart {
     margin-bottom: -2px;
     margin-right: -6px;
@@ -53,6 +57,14 @@ a:link {
     position: relative;
 }
 
+#sign-up:hover {
+    color: #0dd0d3;
+}
+
+.log-item:hover {
+    color: #0dd0d3;
+}
+
 .header {
     top: 0;
     width: 100%;
@@ -60,7 +72,7 @@ a:link {
     text-align: center;
     position: fixed;
     background-color: #bcb3bc;
-    height: 90px;
+    height: 70px;
     margin-top: 20px;
     z-index: 900;
 }
@@ -132,7 +144,7 @@ a:link {
 }
 
 #my-name {
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .banner {
@@ -278,6 +290,16 @@ a:link {
     border-radius: 4px;
 }
 
+.shopping:hover {
+    color: #f1ac67;
+    background-color: #fff;
+}
+
+.more-videos:hover {
+    color: #f1ac67;
+    background-color: #fff;
+}
+
 
 /*form section*/
 
@@ -320,7 +342,7 @@ a:link {
 
 input {
     background-color: #f9f5f1;
-    height: 30px;
+    height: 40px;
     margin-bottom: 10px;
     margin-left: 20px;
     font-size: 10px;
@@ -362,6 +384,11 @@ textarea {
     border-radius: 4px;
 }
 
+.submitIt:hover {
+    color: #337ab7;
+    background-color: #fff;
+}
+
 #social {
     list-style-type: none;
     display: block;
@@ -383,7 +410,11 @@ textarea {
     margin-right: 5px;
 }
 
-.right {
+.so-img:hover {
+    opacity: 1;
+}
+
+.rights {
     font-family: "amatic sc", arial;
     font-weight: 900;
     font-size: 30px;
@@ -445,13 +476,12 @@ textarea {
 
 /*login*/
 
-.login-container1,
-.login-container2 {
+#login-container1 {
+    display: none;
     margin-top: 70px;
-    display: inline-block;
     font-family: "amatic sc";
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1.5;
     text-align: left;
     background-color: #ABE2DA;
@@ -462,7 +492,23 @@ textarea {
     position: fixed;
 }
 
-.listing {
+#login-container2 {
+    display: none;
+    margin-top: 70px;
+    font-family: "amatic sc";
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: left;
+    background-color: #ABE2DA;
+    width: 70%;
+    margin-left: 10%;
+    padding-left: 40px;
+    z-index: 10000;
+    position: fixed;
+}
+
+#listing {
     display: inline;
 }
 
@@ -485,20 +531,25 @@ textarea {
     border-radius: 4px;
 }
 
+.submit:hover {
+    color: #f9f5f1;
+    background-color: black;
+}
+
 .nav-cont {
     margin-top: 50px;
 }
 
 @media screen and (max-width: 800px) {
     .login-top {
-        height: 6vh;
+        height: 4vh;
     }
     .login-top a,
     .login-top p {
         font-size: 3vw;
     }
     .header {
-        height: 13vh;
+        height: 9vh;
     }
     .header li {
         font-size: 4vw;
@@ -506,7 +557,6 @@ textarea {
     input {
         width: 30vw;
         height: 4vh;
-        font-size: 3vw;
     }
     .roundimg,
     .roundimg1,
