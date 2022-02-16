@@ -426,30 +426,37 @@ textarea {
 
 /* connected*/
 
-.stay-connected {
-    font-family: "amatic sc", arial;
-    font-weight: 900;
-    font-size: 50px;
+#stay-connected {
+    display: none;
+    font-family: "amatic sc";
+    font-weight: bold;
+    font-size: 40px;
     text-align: center;
-    color: violet;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    background-color: #ABE2DA;
+    width: 70%;
+    z-index: 10000;
+    position: absolute;
+    padding-top: 15px;
 }
 
 .go-back {
     font-family: "amatic sc", arial;
     font-weight: 900;
-    font-size: 40px;
+    font-size: 30px;
+    color: black;
 }
 
-.video-roler {
+.media {
     margin-top: 50px;
-    border: violet solid 5px;
-    border-radius: 5px;
-    width: 600px;
     padding: 10px;
     margin: auto;
     text-align: center;
+}
+
+.media video {
+    width: 320;
+    height: auto;
+    padding-bottom: 15px;
 }
 
 
@@ -576,9 +583,11 @@ textarea {
         display: block;
     }
     .gallery-opening p,
-    .come-along,
-    #contact-us p {
+    .come-along {
         font-size: 7vw;
+    }
+    #contact-us p {
+        font-size: 5vw;
     }
     .info,
     .hobbies p,
@@ -630,6 +639,13 @@ textarea {
     }
     .forming {
         width: 50vw;
+    }
+    .media {
+        width: 100%;
+    }
+    .media video {
+        width: 100%;
+        height: auto;
     }
     .so-img {
         margin-left: 1px;

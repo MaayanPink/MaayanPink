@@ -1,4 +1,4 @@
-// reviling the login containers
+// revealing the login containers
 function show1() {
     const loginContainer1 = document.getElementById('login-container1');
     const loginContainer2 = document.getElementById('login-container2');
@@ -20,3 +20,9 @@ function show2() {
         loginContainer2.style.display = "none";
     }
 };
+//reveal the submit video
+const stayCon = document.getElementById('stay-connected')
+
+function show3() {
+    stayCon.style.display = "block";
+}

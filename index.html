@@ -175,12 +175,12 @@
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
             </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
             </button>
                 </div>
             </div>
@@ -214,6 +214,15 @@
             <img src="" alt="" class="feather2" height=133px width=400px>
             <form class="form-group" action="connected.html">
                 <div class="form-data">
+                    <div id="stay-connected">
+                        <p>Thank you for your advice</p>
+                        <a href="index.html" class="go-back">go back?</a>
+                        <div class="media">
+                            <video width="320" height="240" autoplay muted loop>
+                            <source src="video/roler.mp4" type="video/mp4">
+                            Roni on Rolers</video>
+                        </div>
+                    </div>
                     <div>
                         <label>Name</label><br>
                         <input type="text" name="name" class="forming" placeholder="enter your name here" required/>
@@ -222,9 +231,13 @@
                         <label>what's on your mind?</label><br>
                         <textarea class="forming" name="comments" rows="10" cols="50" placeholder="suggestions?   ideas?   comments?"></textarea>
                     </div>
-                    <button class="submitIt" id="submitBtn">Submit</button>
-                </div>
+
+                    <div id="submit-com" onclick="show3()">
+                        <button class="submitIt" id="submitBtn">Submit</button>
+                    </div>
+
             </form>
+            </div>
         </div>
         <div id="social-nav">
             <ul id="social">
