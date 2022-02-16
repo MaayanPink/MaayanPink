@@ -392,7 +392,7 @@ textarea {
 #social {
     list-style-type: none;
     display: block;
-    margin: -55px auto 0px;
+    margin: auto;
     position: relative;
     width: 300px;
     height: 50px;
