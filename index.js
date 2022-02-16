@@ -13,9 +13,11 @@ const firebaseApp = initializeApp({
     appId: "1:196218979082:web:1990703aa62829ade730f3",
     measurementId: "G-0Z0WELGY07"
 });
+
 //storage
 const storage = getStorage(firebaseApp);
-//round-image
+
+//round-images
 const storageRef1 = [ref(storage, 'Roni/at the beach.jpeg'), ref(storage, 'Roni/face jewels.jpeg'), ref(storage, 'Roni/makeup.jpeg'), ref(storage, 'feathers/feather_1.png'), ref(storage, 'feathers/feather_3.png'), ref(storage, 'feathers/feather_4.png'), ref(storage, 'feathers/feather_1.png')];
 const addPic1 = [document.querySelector('.roundimg1'), document.querySelector('.roundimg2'), document.querySelector('.roundimg3'), document.querySelector('.feather1'), document.querySelector('.feather3'), document.querySelector('.feather4'), document.querySelector('.feather2')]
 for (let i = 0; i < storageRef1.length; i++) {
@@ -67,11 +69,13 @@ for (let i = 0; i < storageRef4.length; i++) {
     }
 }
 
-// firestore database
+//firestore database
 const db = getFirestore(firebaseApp);
+
 //collection ref
 const colRef = collection(db, 'comments')
-    //get collection data
+
+//get collection data
 getDocs(colRef).then((snapshot) => {
     let comments = []
     snapshot.docs.forEach((doc) => {
@@ -80,7 +84,7 @@ getDocs(colRef).then((snapshot) => {
     console.log(comments)
 })
 
-//adding a comment
+//adding a comment to database
 const addComment = document.querySelector('.form-group')
 addComment.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -95,6 +99,7 @@ addComment.addEventListener('submit', (e) => {
 // authentication
 const auth = getAuth(firebaseApp);
 
+//checking if the user is signed in
 onAuthStateChanged(auth, user => {
     if (user != null) {
         console.log('User is signed in.')
@@ -108,64 +113,85 @@ const newLogin = document.querySelector('#new-login');
 newLogin.reset();
 newLogin.addEventListener('submit', (e) => {
     e.preventDefault();
+
     //get user info
     const email = newLogin['signup-email'].value;
     const password = newLogin['signup-password'].value;
     console.log(email, password);
-    //sign up the user
+
+    //sign up the user + error
     const userCredential = createUserWithEmailAndPassword(auth, email, password).then(userCredential => {
         console.log(userCredential.user);
         newLogin.reset();
         newLogin.querySelector('.error').innerHTML = '';
     }).catch((error) => {
-
-        newLogin.querySelector('.error').innerHTML = error.message;
+        const errorCode = error.code;
+        var errorMessage = ""
+        if (errorCode === "auth/weak-password") {
+            errorMessage = "Password should be at least 6 characters"
+        } else if (errorCode === "auth/email-already-in-use") {
+            errorMessage = "This E-mail is already in use"
+        } else if (errorCode === "auth/invalid-email") {
+            errorMessage = "invalid E-mail"
+        }
+        newLogin.querySelector('.error').innerHTML = errorMessage;
     });
 });
 
-$('.sub1').click(function() {
+//closing the signup container
+const loginContainer1 = document.getElementById('login-container1');
+document.getElementById("sub1").addEventListener("click", hide1());
+
+
+function hide1() {
     onAuthStateChanged(auth, user => {
         if (user != null) {
-            $('#login-container1').hide(500);
-        } else {
-            $('#login-container1').show(0);
+            loginContainer1.style.display = "none"
         }
-
     });
-});
-
+};
 
 //sign in
 const oldLogin = document.querySelector('#old-login');
 oldLogin.reset();
 oldLogin.addEventListener('submit', (e) => {
     e.preventDefault();
+
     //get user info
     const email = oldLogin['signin-email'].value;
     const password = oldLogin['signin-password'].value;
     console.log(email, password);
-    //sign in  user
+
+    //sign in  user + error
     const userCredential = signInWithEmailAndPassword(auth, email, password).then(userCredential => {
         console.log(userCredential.user);
         oldLogin.reset();
         oldLogin.querySelector('.error').innerHTML = '';
     }).catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-        oldLogin.querySelector('.error').innerHTML = errorCode;
-    });
-});
-
-$('.sub2').click(function() {
-    onAuthStateChanged(auth, user => {
-        if (user != null) {
-            $('#login-container2').hide(500);
-        } else {
-            $('#login-container2').show(0);
+        var errorMessage = ""
+        console.log(errorCode)
+        if (errorCode === "auth/wrong-password") {
+            errorMessage = "wrong password, try again"
+        } else if (errorCode === "auth/user-not-found") {
+            errorMessage = "Sorry, the user is not found"
         }
 
+        oldLogin.querySelector('.error').innerHTML = errorMessage;
     });
 });
+
+//closing the sign in container
+const loginContainer2 = document.getElementById('login-container2');
+document.getElementById("sub2").addEventListener("click", hide2());
+
+function hide2() {
+    onAuthStateChanged(auth, user => {
+        if (user != null) {
+            loginContainer2.style.display = "none"
+        }
+    });
+}
 
 //sign out 
 const logout = document.querySelector('#logout');
