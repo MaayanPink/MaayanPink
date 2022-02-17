@@ -12,7 +12,7 @@
 
 .login-top {
     position: fixed;
-    z-index: 1000;
+    z-index: 3000;
     width: 100%;
     top: 0;
     height: 25px;
@@ -29,32 +29,22 @@
     font-family: "amatic sc", sans-serif;
     font-weight: 900;
     font-size: 20px;
-    text-transform: uppercase;
-    color: black;
     color: #065e60;
-    letter-spacing: 1px;
-    display: block;
     margin-left: 10px;
-    margin-right: 10px;
     cursor: pointer;
-    margin-top: 0px;
 }
 
 a:link {
     text-decoration: none;
 }
 
-.pagelink:hover {
+.pageLink:hover {
     color: #0dd0d3;
 }
 
 .icon-cart {
     margin-bottom: -2px;
     margin-right: -6px;
-}
-
-#sign-up {
-    position: relative;
 }
 
 #sign-up:hover {
@@ -65,16 +55,50 @@ a:link {
     color: #0dd0d3;
 }
 
+#listing {
+    display: inline;
+}
+
+
+/*login*/
+
+#login-container1 {
+    display: none;
+    margin-top: 25px;
+    font-family: "amatic sc";
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #ABE2DA;
+    width: 70%;
+    margin-left: 40px;
+    padding-left: 20px;
+    z-index: 10000;
+    position: fixed;
+}
+
+#login-container2 {
+    display: none;
+    margin-top: 25px;
+    font-family: "amatic sc";
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #ABE2DA;
+    width: 70%;
+    margin-left: 10%;
+    padding-left: 20px;
+    z-index: 10000;
+    position: fixed;
+}
+
 .header {
     top: 0;
     width: 100%;
-    text-transform: uppercase;
     text-align: center;
     position: fixed;
     background-color: #bcb3bc;
     height: 70px;
     margin-top: 20px;
-    z-index: 900;
+    z-index: 2000;
 }
 
 .header li {
@@ -102,7 +126,6 @@ a:link {
 }
 
 .round-li {
-    width: 100%;
     text-align: center;
 }
 
@@ -137,8 +160,7 @@ a:link {
 .feather3,
 .feather4 {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -170,7 +192,6 @@ a:link {
     border-width: 3px;
     border-style: double;
     border-color: #4A4A4A;
-    display: inline;
 }
 
 .banner-pic2 {
@@ -183,7 +204,7 @@ a:link {
     padding: 10px;
     color: black;
     font-weight: bold;
-    line-height: 1.4;
+    line-height: 1.5;
     margin-top: 50px
 }
 
@@ -245,7 +266,6 @@ a:link {
 .video-container {
     display: flex;
     background-color: #fd8e37;
-    width: 100%;
     margin-top: 40px;
 }
 
@@ -259,12 +279,11 @@ a:link {
 .video {
     width: 50%;
     background-color: #fd8e37;
-    padding-top: 15px;
     margin: 15px 0 0 20px;
 }
 
 .vid-info>div {
-    margin: 15px;
+    margin: 10px;
 }
 
 .vid-info {
@@ -313,8 +332,6 @@ a:link {
     color: #e5c3dd;
     font-family: "amatic sc";
     font-weight: bold;
-    margin-left: 70px;
-    margin-right: 70px;
     text-align: center;
 }
 
@@ -394,9 +411,10 @@ textarea {
     display: block;
     margin: auto;
     position: relative;
-    width: 300px;
     height: 50px;
+    text-align: center;
     z-index: 99;
+    padding: 0;
 }
 
 #social li {
@@ -478,45 +496,6 @@ textarea {
     color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;
-}
-
-
-/*login*/
-
-#login-container1 {
-    display: none;
-    margin-top: 70px;
-    font-family: "amatic sc";
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 1.5;
-    text-align: left;
-    background-color: #ABE2DA;
-    width: 70%;
-    margin-left: 10%;
-    padding-left: 40px;
-    z-index: 10000;
-    position: fixed;
-}
-
-#login-container2 {
-    display: none;
-    margin-top: 70px;
-    font-family: "amatic sc";
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 1.5;
-    text-align: left;
-    background-color: #ABE2DA;
-    width: 70%;
-    margin-left: 10%;
-    padding-left: 40px;
-    z-index: 10000;
-    position: fixed;
-}
-
-#listing {
-    display: inline;
 }
 
 .submit {
