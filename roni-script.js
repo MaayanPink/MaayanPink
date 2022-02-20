@@ -1,7 +1,8 @@
 // revealing the login containers
+const loginContainer1 = document.getElementById('login-container1');
+const loginContainer2 = document.getElementById('login-container2');
+
 function show1() {
-    const loginContainer1 = document.getElementById('login-container1');
-    const loginContainer2 = document.getElementById('login-container2');
     loginContainer2.style.display = "none";
     if (loginContainer1.style.display === "none") {
         loginContainer1.style.display = "inline-block";
@@ -11,8 +12,6 @@ function show1() {
 };
 
 function show2() {
-    const loginContainer1 = document.getElementById('login-container1');
-    const loginContainer2 = document.getElementById('login-container2');
     loginContainer1.style.display = "none";
     if (loginContainer2.style.display === "none") {
         loginContainer2.style.display = "inline-block";
@@ -25,4 +24,8 @@ const stayCon = document.getElementById('stay-connected')
 
 function show3() {
     stayCon.style.display = "block";
+}
+
+function hide3() {
+    stayCon.style.display = "none";
 }

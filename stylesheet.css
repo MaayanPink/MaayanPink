@@ -387,13 +387,10 @@ textarea {
 }
 
 .submitIt {
-    display: inline-block;
     padding: 6px 12px;
     margin-top: 50px;
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.42857143;
-    vertical-align: bottom;
     cursor: pointer;
     background: #337ab7;
     color: #fff;
@@ -457,17 +454,21 @@ textarea {
     padding-top: 15px;
 }
 
-.go-back {
+#go-back {
+    padding: 6px 12px;
     font-family: "amatic sc", arial;
-    font-weight: 900;
-    font-size: 30px;
-    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    background: #337ab7;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: -20px auto 20px auto;
 }
 
 .media {
-    margin-top: 50px;
-    padding: 10px;
-    margin: auto;
+    padding: 10px 10px 0px 10px;
     text-align: center;
 }
 
