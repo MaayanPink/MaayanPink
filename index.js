@@ -18,8 +18,8 @@ const firebaseApp = initializeApp({
 const storage = getStorage(firebaseApp);
 
 //round-images
-const storageRef1 = [ref(storage, 'Roni/at the beach.jpeg'), ref(storage, 'Roni/face jewels.jpeg'), ref(storage, 'Roni/makeup.jpeg'), ref(storage, 'feathers/feather_1.png'), ref(storage, 'feathers/feather_3.png'), ref(storage, 'feathers/feather_4.png'), ref(storage, 'feathers/feather_1.png')];
-const addPic1 = [document.querySelector('.roundimg1'), document.querySelector('.roundimg2'), document.querySelector('.roundimg3'), document.querySelector('.feather1'), document.querySelector('.feather3'), document.querySelector('.feather4'), document.querySelector('.feather2')]
+const storageRef1 = [ref(storage, 'Roni/at the beach.jpeg'), ref(storage, 'Roni/face jewels.jpeg'), ref(storage, 'Roni/makeup.jpeg')];
+const addPic1 = [document.querySelector('.roundimg1'), document.querySelector('.roundimg2'), document.querySelector('.roundimg3')]
 for (let i = 0; i < storageRef1.length; i++) {
     for (let j = 0; j < addPic1.length; j++) {
         if (i == j) {
@@ -75,15 +75,6 @@ const db = getFirestore(firebaseApp);
 //collection ref
 const colRef = collection(db, 'comments')
 
-//get collection data
-getDocs(colRef).then((snapshot) => {
-    let comments = []
-    snapshot.docs.forEach((doc) => {
-        comments.push({...doc.data(), id: doc.id })
-    })
-    console.log(comments)
-})
-
 //adding a comment to database
 const addComment = document.querySelector('.form-group')
 addComment.addEventListener('submit', (e) => {
@@ -96,6 +87,16 @@ addComment.addEventListener('submit', (e) => {
     })
 });
 
+//get collection data to the console
+getDocs(colRef).then((snapshot) => {
+    let comments = []
+    snapshot.docs.forEach((doc) => {
+        comments.push({...doc.data() })
+    })
+    console.log(comments)
+})
+
+
 // authentication
 const auth = getAuth(firebaseApp);
 
@@ -105,6 +106,8 @@ onAuthStateChanged(auth, user => {
         console.log('User is signed in.')
     } else {
         console.log('User is signed out.')
+        const greet = document.getElementById('hi');
+        greet.innerHTML = "";
     }
 });
 
@@ -117,11 +120,17 @@ newLogin.addEventListener('submit', (e) => {
     //get user info
     const email = newLogin['signup-email'].value;
     const password = newLogin['signup-password'].value;
-    console.log(email, password);
+    //console.log(email, password);
 
-    //sign up the user + error
+    //greeting user
+    const num = email.indexOf('@');
+    const emailName = email.slice(0, num);
+    const greet = document.getElementById('hi');
+    greet.innerHTML = "hi, " + emailName
+
+    //sign up the user + error options
     const userCredential = createUserWithEmailAndPassword(auth, email, password).then(userCredential => {
-        console.log(userCredential.user);
+        //console.log(userCredential.user);
         newLogin.reset();
         newLogin.querySelector('.error').innerHTML = '';
     }).catch((error) => {
@@ -153,30 +162,33 @@ function hide1() {
 
 //sign in
 const oldLogin = document.querySelector('#old-login');
-oldLogin.reset();
 oldLogin.addEventListener('submit', (e) => {
     e.preventDefault();
 
     //get user info
     const email = oldLogin['signin-email'].value;
     const password = oldLogin['signin-password'].value;
-    console.log(email, password);
+    //console.log(email, password);
+
+    //greeting user
+    const num = email.indexOf('@');
+    const emailName = email.slice(0, num);
+    const greet = document.getElementById('hi');
+    greet.innerHTML = "hi, " + emailName
 
     //sign in  user + error
     const userCredential = signInWithEmailAndPassword(auth, email, password).then(userCredential => {
-        console.log(userCredential.user);
+        //console.log(userCredential.user);
         oldLogin.reset();
         oldLogin.querySelector('.error').innerHTML = '';
     }).catch((error) => {
         const errorCode = error.code;
         var errorMessage = ""
-        console.log(errorCode)
         if (errorCode === "auth/wrong-password") {
             errorMessage = "wrong password, try again"
         } else if (errorCode === "auth/user-not-found") {
             errorMessage = "Sorry, the user is not found"
         }
-
         oldLogin.querySelector('.error').innerHTML = errorMessage;
     });
 });
@@ -197,5 +209,5 @@ function hide2() {
 const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
-    signOut(auth).then(() => {});
+    signOut(auth);
 });

@@ -115,13 +115,22 @@ a:link {
     padding: 10px 5px;
 }
 
+#hi {
+    font-family: "amatic sc", sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: #ef96b7;
+    text-align: center;
+    padding-top: 120px;
+}
+
 .roni {
     font-family: "amatic sc", arial;
     font-weight: 900;
     font-size: 100px;
     text-align: center;
     color: #ef96b7;
-    padding-top: 150px;
+    padding-top: 20px;
     margin-bottom: 30px;
 }
 
