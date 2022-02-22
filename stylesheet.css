@@ -90,6 +90,55 @@ a:link {
     position: fixed;
 }
 
+.submit {
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    touch-action: manipulation;
+    background: #f9f5f1;
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.submit:hover {
+    color: #f9f5f1;
+    background-color: black;
+}
+
+#new-password {
+    display: none;
+    margin-top: 25px;
+    font-family: "amatic sc";
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #ABE2DA;
+    width: 70%;
+    margin-left: 10%;
+    padding-left: 20px;
+    z-index: 10000;
+    position: fixed;
+}
+
+#forget-password {
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#forget-password:hover {
+    color: #ef96b7;
+}
+
 .header {
     top: 0;
     width: 100%;
@@ -506,30 +555,6 @@ textarea {
     color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;
-}
-
-.submit {
-    color: black;
-    display: inline-block;
-    padding: 6px 12px;
-    margin-top: 50px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    touch-action: manipulation;
-    background: #f9f5f1;
-    color: black;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-.submit:hover {
-    color: #f9f5f1;
-    background-color: black;
 }
 
 .nav-cont {

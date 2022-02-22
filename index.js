@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, signOut } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
 import { getFirestore, collection, getDocs, addDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js";
 
@@ -204,6 +204,23 @@ function hide2() {
         }
     });
 }
+
+//reset password Email
+const resetPassword = document.getElementById('change-password');
+resetPassword.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = resetPassword['signin-email'].value;
+    sendPasswordResetEmail(auth, email)
+        .then(() => {
+            //closing the reset password container
+            const newPassword = document.getElementById('new-password');
+            document.getElementById("sub3").addEventListener("click", hide3());
+
+            function hide3() {
+                newPassword.style.display = "none"
+            }
+        })
+})
 
 //sign out 
 const logout = document.querySelector('#logout');

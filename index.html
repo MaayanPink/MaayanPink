@@ -38,9 +38,7 @@
                             </li>
                         </div>
                     </ul>
-
                 </div>
-
             </div>
             <div id="login-container1" style="display: none;">
                 <div class="new-friend">
@@ -76,9 +74,22 @@
                         <div id="sub2">
                             <input type="submit" class="submit" value="Sign in">
                         </div>
-                        <p class="error"></p>
+                        <p onclick="show4()" id="forget-password">Forget your password?</button>
+                            <p class="error"></p>
                     </form>
                 </div>
+            </div>
+            <div id="new-password">
+                <form id="change-password">
+                    <p>did you forget your password?</p>
+                    <div>
+                        <label for="signin-email">E-Mail</label><br>
+                        <input type="text" name="email" id="signin-email" placeholder="enter your E-Mail here" />
+                    </div>
+                    <div id="sub3">
+                        <input type="submit" class="submit" value="reset password">
+                    </div>
+                </form>
             </div>
             <nav class="header">
                 <ul>
