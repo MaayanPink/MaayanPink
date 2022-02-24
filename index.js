@@ -171,10 +171,17 @@ oldLogin.addEventListener('submit', (e) => {
     //console.log(email, password);
 
     //greeting user
-    const num = email.indexOf('@');
-    const emailName = email.slice(0, num);
-    const greet = document.getElementById('hi');
-    greet.innerHTML = "hi, " + emailName
+    onAuthStateChanged(auth, user => {
+        if (user != null) {
+            const num = email.indexOf('@');
+            const emailName = email.slice(0, num);
+            const greet = document.getElementById('hi');
+            greet.innerHTML = "hi, " + emailName
+        } else {
+            const greet = document.getElementById('hi');
+            greet.innerHTML = "see you soon"
+        };
+    });
 
     //sign in  user + error
     const userCredential = signInWithEmailAndPassword(auth, email, password).then(userCredential => {
@@ -209,7 +216,7 @@ function hide2() {
 const resetPassword = document.getElementById('change-password');
 resetPassword.addEventListener('submit', (e) => {
     e.preventDefault();
-    const email = resetPassword['signin-email'].value;
+    const email = resetPassword['sign-in-email'].value;
     sendPasswordResetEmail(auth, email)
         .then(() => {
             //closing the reset password container
